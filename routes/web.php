@@ -18,3 +18,10 @@ Route::get('/', 'HomeController@index');
  * |-----Resources-----|
  */
 Route::resource('Home', 'HomeController');
+/*
+ * |-----AdminPanel-----|
+ */
+Route::resource('admin','AdminController');
+Route::get('/admin','AdminController@index');
+Route::get('/adminenter','AdminController@enter')->name('adminenter');
+Route::get('/adminPanel','AdminController@adminPanel')->name('adminPanel');
